@@ -1,0 +1,30 @@
+--Read Uncommitted
+SET TRANSACTION ISOLATION LEVEL
+	READ UNCOMMITTED
+
+	SELECT LastName
+	FROM Employees
+	WHERE EmployeeID = 104
+
+--Read committed
+BEGIN TRANSACTION
+
+SET TRANSACTION ISOLATION LEVEL
+	READ COMMITTED
+
+	SELECT LastName
+	FROM Employees
+	WHERE EmployeeID = 103
+
+--Non repeatable Read
+	SELECT LastName
+	FROM Employees
+	WHERE EmployeeID = 103
+
+WAITFOR DELAY '00:00:05'
+
+	SELECT LastName
+	FROM Employees
+	WHERE EmployeeID = 103
+
+COMMIT TRANSACTION

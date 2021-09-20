@@ -1,0 +1,75 @@
+--TRANSACTION
+BEGIN TRANSACTION
+INSERT INTO Person VALUES ( 5, 'Rita','Female','Rajkot',32000)
+COMMIT TRANSACTION
+
+SELECT * FROM Person
+
+--DELETE 
+BEGIN TRANSACTION
+DELETE FROM Person
+WHERE PersonID = 5
+COMMIT
+
+--Naming a transaction
+DECLARE @TranName VARCHAR(20);  
+SELECT @TranName = 'MyTransaction';  
+  
+BEGIN TRANSACTION @TranName;    
+INSERT INTO Person VALUES ( 5, 'Rita','Female','Rajkot',32000)
+COMMIT TRANSACTION @TranName;  
+GO  
+
+
+--TRANSACTION
+BEGIN TRANSACTION MyTrn
+BEGIN TRY
+UPDATE Person 
+SET Salary =Salary - 2000
+WHERE PersonID = 2
+--STATEMENT 1
+UPDATE Person 
+SET City= 'Rajkot'
+WHERE Name = 'Rishi'
+COMMIT TRANSACTION MyTran
+--STATEMENT 2
+SELECT 'Transaction executed'
+END TRY
+BEGIN CATCH
+ROLLBACK TRANSACTION MyTran
+SELECT 'Transaction Rollback'
+END CATCH
+
+SELECT * FROM Person
+
+--Read uncommitted
+BEGIN TRANSACTION 
+UPDATE Employees
+SET LastName = 'Steve'
+WHERE EmployeeID = 104
+
+----Read committed
+BEGIN TRANSACTION 
+UPDATE Employees
+SET LastName = 'Smith'
+WHERE EmployeeID = 103
+
+ROLLBACK TRANSACTION
+
+--Non repeatable Read
+BEGIN TRANSACTION 
+UPDATE Employees
+SET LastName = 'Stane'
+WHERE EmployeeID = 103
+
+COMMIT TRANSACTION
+
+--SERIALIZABLE
+BEGIN TRANSACTION 
+UPDATE Employees
+SET LastName = 'King'
+WHERE EmployeeID = 100
+
+COMMIT TRANSACTION
+SELECT * FROM Employees
+
