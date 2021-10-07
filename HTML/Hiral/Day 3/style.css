@@ -1,0 +1,13 @@
+h1{
+    color:blue;
+}
+p{
+    font-style: bold;
+}
+div{
+    background-color:lightgrey;
+    width:300px;
+    border:10px solid brown;
+    padding:50px;
+    margin:30px;
+}

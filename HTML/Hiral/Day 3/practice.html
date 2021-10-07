@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS box model & Flex model</title>
+
+    <link rel="stylesheet" href="style.css">
+<style>
+    .flex-container{
+        display: flex;
+        background-color:pink;
+        border:15px outset rgb(67, 177, 67);
+    }
+   .flex-container > div{
+        background-color:white;
+        border:15px ridge yellowgreen;
+        margin:2px;
+        padding:15px;
+        text-align: center;
+        line-height: 20px;
+        font-size: 30px;
+    }
+    .box{
+        display: flex;
+        flex-direction:row-reverse;
+        background-color:salmon;
+        border:20px groove green;
+    }
+   .box > div{
+        background-color:grey;
+        border:20px groove green;
+        margin:2px;
+        padding:15px;
+        text-align: center;
+        line-height: 20px;
+        font-size: 30px;
+    }
+
+</style>
+</head>
+<body>
+    
+    <h1>
+         Box  Model.
+    </h1>
+
+    <p>
+        Learning the CSS Box Model.
+    </p>
+
+    <div>
+        The CSS box model is essentially a box that wraps around every HTML element. It consists of: borders, padding, margins, and the actual content.
+    </div>
+
+    <h2>
+        Flex Model
+    </h2>
+
+    <p>
+        Learning the CSS Flex Model.
+    </p>
+
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>

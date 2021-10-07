@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.intro {
+  background-color:pink;
+}
+#firstname{
+    background-color: crimson;
+}
+p.intro {
+  background-color:darkgoldenrod;
+}
+h1,p{
+    background-color:pink;
+}
+div p{
+    color:purple;
+}
+div > p{
+    background-color: rosybrown;
+}
+div + p{
+    background-color: pink;
+}
+p ~ ul{
+    background-color: green;
+}
+a[target] {
+  background-color:grey;
+}
+input[type=text]{
+    background-color: pink;
+}
+[lang|=en]{
+    background-color: seagreen;
+}
+div[class$="test"] {
+  background:orange;
+}
+  /* unvisited link */
+a:link{
+  color: green;
+}
+
+/* visited link */
+a:visited {
+  color: purple;
+}
+
+/* mouse over link */
+a:hover {
+  color: red;
+}
+
+/* selected link */
+a:active {
+  color: yellow;
+} 
+
+</style>
+</head>
+<body>
+
+<h1>Welcome to My Homepage</h1>
+
+<div class="intro">
+  <p id="firstname">>My name is Donald.</p>
+  <p>I live in Duckburg.</p>
+</div>
+
+<p>My best friend is Mickey.</p>
+
+<p class="intro">My best friend is Jeni.</p>
+
+<div>A div element.</div>
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+<p>The first paragraph.</p>
+<ul>
+
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+<h2>Another list</h2>
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+<p>The links with a target attribute gets a yellow background:</p>
+
+<a href="https://www.w3schools.com">w3schools.com</a>
+<a href="http://www.disney.com" target="_blank">disney.com</a>
+<a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+
+<!--type-text-->
+<h3>The width Property</h3>
+
+<p>Set the width of the input field to 100 pixels. However, when the input field gets focus, make it 250 pixels wide:</p>
+
+Search: <input type="text" name="search">
+
+<!--lang attribute-->
+<p lang="en">Hello!</p>
+<p lang="en-us">Hi!</p>
+<p lang="en-gb">Ello!</p>
+<p lang="us">Hi!</p>
+<p lang="no">Hei!</p>
+
+<!--ends with-->
+<div class="first_test">The first div element.</div>
+<div class="second">The second div element.</div>
+<div class="test">The third div element.</div>
+<p class="test">This is some text in a paragraph.</p>
+
+<p>Mouse over and click the link:
+ <a href="https://www.w3schools.com">w3schools.com</a></p>
+</body>
+</html>

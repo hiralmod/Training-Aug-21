@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+</head>
+<body>
+    <form method="post">
+        Name:<input type="text" name="name" required min><br><br>
+
+        Age:<input type="number"  name="age" min="18" required><br><br>
+
+        Gender:<input type="radio" name="gender" required="required"> Male <br>
+
+        <input type="radio" name="gender" required="required"> Female <br><br>
+
+        Designation:<input type="text" name="Designation" required><br><br>
+
+        Salary:<input type="number" name="salary" required><br><br>
+
+        Location:<select name="Location" id="Location">
+            <option value="India">India</option>
+            <option value="Canada">Canada</option>
+            <option value="Australia">Australia</option>
+            <option value="South Africa">South Africa</option>
+            <option value="London">London</option>
+        </select><br><br>
+
+        Email ID: <input type="email"  name="email" required><br><br>
+        
+        Date Of Joining:<input type="date" name="DOJ" required>
+    </form>
+</body>
+</html>
