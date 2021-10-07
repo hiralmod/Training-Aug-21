@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+    function ex(){
+        alert("first alert");
+        alert("Second alert");
+    }
+    </script>
+    
+    <script src="demo.js"></script>
+</head>
+<body>
+    <h1>My first javascript program.</h1>
+    <p>This is text.
+        <button type="button" onclick="alert('click on button');">Click me</button>
+    </p>
+
+<!--function-->
+    <h1>function</h1>
+    <p>This is text.
+        <button type="button" onclick="ex()">Click me</button>
+    </p>
+
+<!--inner html-->
+    <h2>Inner HTML</h2>
+    <p id="demo">Change HTML content.</p>
+    <button type="button" onclick='document.getElementById("demo").innerHTML="Hello!"'>Click me</button>
+
+<!--sum of two numbers-->
+    <h2>Sum</h2>
+    <p id="demo1">Sum of two numbers</p>
+    <script>
+        let x,y,z;
+        x = 5;        
+        y = 6;    
+        z = x + y;    
+
+        document.getElementById("demo1").innerHTML ="The value of z is " + z + ".";  
+
+</script>
+
+<!--switch case-->
+    <h2>Switch</h2>
+        <p id="demo2"></p>
+        <script>
+            let a=1;
+            switch (a) {
+            case 0:
+                console.log(text = "Off");
+                break;
+            case 1:
+                console.log(text = "On");
+                break;
+            default:
+                console.log(text = "No value found");
+            }
+            document.getElementById("demo2").innerHTML = text;
+            </script>
+
+<!--for-->
+        <h2>JavaScript For Loop</h2>
+
+            <p id="ex"></p>
+
+            <script>
+            let text = "";
+
+            for (let i = 0; i < 5; i++) {
+            text += "The number is " + i + "<br>";
+            }
+
+            document.getElementById("ex").innerHTML = text;
+            </script>
+
+<!--for in-->
+        <h2>JavaScript For In Loop</h2>
+        <p>The for in statement loops</p>
+
+        <p id="ex1"></p>
+
+        <script>
+        const person = {fname:"John", lname:"Doe", age:25}; 
+
+        let txt = "";
+        for (let i in person) {
+        txt += person[i] + "<br>";
+        }
+
+        document.getElementById("ex1").innerHTML = txt;
+        </script>
+
+<!--for of-->
+        <h2>JavaScript For Of Loop</h2>
+        <p>The for of statement loop</p>
+
+        <p id="ex2"></p>
+
+        <script>
+        const cars = ["BMW", "Volvo", "Mini"];
+
+        let res = "";
+        for (let x of cars) {
+        res += x + "<br>";
+        }
+
+        document.getElementById("ex2").innerHTML = res;
+        </script>
+
+<!--while-->
+        <h2>JavaScript While Loop</h2>
+
+        <p id="ex3"></p>
+
+        <script>
+        let r = "";
+        let i = 0;
+        while (i < 10) {
+        r += "<br>The number is " + i;
+        i++;
+        }
+        document.getElementById("ex3").innerHTML = r;
+        </script>
+</body>
+</html>

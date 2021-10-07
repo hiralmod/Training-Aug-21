@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var name="hiral";
+        var arr=["Hiral","sonam","riya","Poonam"]
+
+//length
+        console.log(name.length);
+
+//slice
+        console.log(name.slice(0,3));
+        console.log(arr.slice(2,-1));
+
+//substring
+        console.log(name.substring(1,3));
+
+//replace
+        var text = "Hello world!";
+        var T = text.replace("world", "Guys");
+        console.log(T);
+
+//uppercase
+        var T2=text.toUpperCase();
+        console.log(T2);
+
+//lowercase
+        var T3=text.toLowerCase();
+        console.log(T3);
+
+//concat
+        var x = "Hello";
+        var y = "World";
+        var z = x.concat(",", y);
+        console.log(z);
+
+//trim
+        var a = "    Microsoft word        ";
+        console.log(a.trim());
+
+//indexOf
+        var str="Javascript learning";
+        console.log(str.indexOf("learning"));
+
+//lastindexof
+        var b="javascript";
+        console.log(b.lastIndexOf("a"));
+
+//search
+        console.log(str.search("Javascript"));
+
+    </script>
+</head>
+<body>
+    <script>
+        var date=new Date();
+        var date1=new Date(2020,03,16);
+
+        if(date>date1)
+        {
+            console.log("true")
+        }
+        else{
+            console.log("false")
+        }
+
+//current date
+        console.log(new Date());
+
+//date
+        console.log(new Date(2019,08,09));
+        console.log(new Date(2018,02,01,10,00,00));
+
+//date
+        var d=new Date();
+        console.log(d.getFullYear());
+        console.log(d.getHours());
+        console.log(d.getMonth());
+        console.log(d.getMinutes());
+        console.log(d.getSeconds());
+        console.log(d.getUTCDate());
+        console.log(d.getMilliseconds());
+        console.log(d.getTime());
+        console.log(d.getTimezoneOffset());
+        console.log(d.getUTCHours());
+        console.log(d.getUTCMinutes());
+        console.log(d.getUTCMonth());
+        console.log(d.getUTCSeconds());
+
+/*regular Expression*/
+//search
+        var p = "Statue Of Liberty";
+        var n = p.search(/liberty/i);
+        console.log(n);
+
+//replace
+        var p1=p.replace("Liberty","Unity");
+        console.log(p1);
+
+//test
+        var c=/c/;
+        console.log(c.test("Magic!"));//return true
+        
+        var d=/e/;
+        console.log(d.test("Magic!")); //return false
+
+
+
+/*number*/
+        var x1 = 12e5;  
+        var y1 = 123e-3; 
+        console.log(x1);
+        console.log(y1);
+
+//toExponential
+        var i = 7.657;
+        console.log(i.toExponential(2));  
+        console.log(i.toExponential(4));    
+        console.log(i.toExponential(6));   
+
+//toprecision
+        console.log(i.toPrecision());  
+        console.log(i.toPrecision(2));  
+        console.log(i.toPrecision(4));    
+        console.log(i.toPrecision(6));
+
+
+//tofixed
+        console.log(i.toFixed(0));  
+        console.log(i.toFixed(2));    
+        console.log(i.toFixed(4));
+        console.log(i.toFixed(5));
+
+//parseInt
+        console.log(parseInt("-5"));       
+        console.log(parseInt("-5.33"));     
+        console.log(parseInt("7"));         
+        console.log(parseInt("8.33"));      
+        console.log(parseInt("15 20 30"));   
+        console.log(parseInt("20 years"));   
+        console.log(parseInt("years 10")); 
+
+//max-value
+        var s=Number.MAX_VALUE;
+        console.log(s);
+
+//min-value
+        var s1=Number.MIN_VALUE;
+        console.log(s1);
+    </script>
+</body>
+</html>

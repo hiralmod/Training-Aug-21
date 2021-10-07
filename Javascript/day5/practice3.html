@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+         var Employee =
+        {
+            Name: "shruti zala",
+            Address: "Rajkot",
+            Designation:"Trainee Software Engineer"
+        }
+
+        var data=
+        {
+            Info: function()
+            {
+                return " Name :"+this.Name +", Address: "+this.Address+', Designation: '+this.Designation;
+            }
+        }
+
+        var data2=
+        {
+            Info: function(city)
+            {
+                return " Name :"+this.Name +", Address: "+this.Address+', Designation: '+this.Designation+", City:" + city; 
+            }
+        }
+
+        console.log(data.Info.call(Employee));
+        console.log(data2.Info.apply(Employee,["Rajkot"]));
+    </script>
+</body>
+</html>

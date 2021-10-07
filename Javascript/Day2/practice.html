@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+    <script>
+
+//Write a JavaScript function to check whether a string is blank or not.
+        var name="abcd"
+
+        if(name=== ""){
+            console.log("true")
+        }
+        else{
+            console.log("false")
+        }
+
+//Write a JavaScript function to split a string and convert it into an array of words.
+
+        var x="abc.def"
+        var arr
+        console.log(x.split('.'));
+        console.log(Array.from(x));
+
+
+//Write a JavaScript function to extract a specified number of characters from a string.
+
+        var y="hello world!"
+
+        console.log(y.substr(1,7));
+
+//Write a JavaScript function to get the current date.
+        var date=new Date();
+
+        console.log(Date());
+
+//Try some operation with list like push, pop, shifting, deleting element.
+
+        var arr=["apple","banana","peach","starwberry"];
+
+//push 
+        console.log(arr.push("mango"));
+        console.log(arr);
+
+//pop
+        console.log(arr.pop());
+        console.log(arr);
+
+//shift
+        arr.shift();
+        console.log(arr);
+
+//join
+        console.log(arr.join("*"));
+
+//unshift
+        arr.unshift("lemon");
+        console.log(arr);
+
+//change element
+        arr[0]="kiwi";
+        console.log(arr);
+
+//append element
+        arr[arr.length]="orange";
+        console.log(arr);
+
+//delete element
+        delete arr[0];
+        console.log(arr);
+
+//splice
+        arr.splice(2,0,"kiwi");
+        console.log(arr);
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="circle"></p>
+    <script>
+        var areaofcircle = function (radius) 
+        {
+            return  Math.PI * radius * radius 
+        };
+        var a = 3;
+        var x = areaofcircle(a);
+        document.getElementById('circle').innerHTML = "the area of circle  of radius "+a+" is :"+x;
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    
+</head>
+<body>
+<!--Accept three numbers from the user using prompt, find the greater of these the numbers and do the sum of that numbers which are greater than 40.-->
+    <script>
+        let num1 = prompt('Enter No1:');
+        let num2 = prompt('Enter No2:');
+        let num3 = prompt('Enter No3:');
+        function max(x,y,z){
+        if(x<y && z<y)
+        {
+            return y;
+        }
+       else if(z<x)
+        {
+            return x;
+        }
+        else
+        {
+            return z;
+        }
+        }
+        
+        function sum(x,y,z){
+        let res = 0;
+            if(x>40){
+                res += x;
+            }
+            if(y>40){
+                res += y;
+            }
+            if(z>40){
+                res += z;
+            }
+            return res;
+        }
+        let greater = max(parseInt(num1),parseInt(num2),parseInt(num3));
+        let add = sum(parseInt(num1),parseInt(num2),parseInt(num3));
+        alert(greater+' is greater'+'\ntotal sum is '+add);
+    </script>
+
+</body>
+</html>

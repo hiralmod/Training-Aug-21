@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" 
+    crossorigin="anonymous">
+</head>
+<body>
+  
+    <div class="container mt-5 d-flex">
+        <input class="form-control" type="text" id="Date">
+        <input class="btn btn-danger" type="submit" value="Submit" onclick="datevalid(pt)">
+    </div>
+<script>
+        var pt=/^(0?[1-9]|1[0-2])\-(0?[1-9]|[1-2][0-9]|3[01])\-\d{4}$/;
+        function datevalid(pt)
+        {
+            var date = document.getElementById("Date").value;
+            if(date.match(pt)) 
+            {
+            var dt = date.split("-");
+            var month = parseInt(dt[0]);
+            var date = parseInt(dt[1]);
+            var year = parseInt(dt[2]);
+            var days=[31,28,31,30,31,30,31,31,30,31,30,31];
+
+            if(month==1|| month>2)
+            {
+                if(date>days[month-1])
+                {
+                    return false;
+                }
+            }
+
+            //leap year
+            if (month==2)
+            {      
+            var ly = false;  
+
+            if ( (!(year % 4) && year % 100) || !(year % 400))
+            {      
+                ly = true;      
+            } 
+
+            if ((ly == false) && (date>=29))
+            {      
+                return false;      
+            }
+
+            else if ((ly==true) && (date>29))
+            {      
+                alert('Invalid date format!');      
+                return false;      
+            }      
+            }
+
+            else
+            {
+                console.log("valid date");
+            }
+        }
+        else {
+            alert("Invalid date")
+        }
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+crossorigin="anonymous"></script>
+</body>
+</html>
