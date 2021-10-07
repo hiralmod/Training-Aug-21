@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltips</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" 
+    crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+<!--tooltips-->
+        <button class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="tooltip on top">tooltip on top</button>
+        <button class="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="right" title="tooltip on right">tooltip on right</button>
+        <button class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="tooltip on bottom">tooltip on bottom</button>
+        <button class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="left" title="tooltip on left">tooltip on left</button>
+    <br><br>
+
+<!--tooltips with html-->
+        <button id="hello" class="btn btn-primary" data-bs-toggle="tooltip" 
+        data-bs-placement="top" data-bs-html="true" title="Hello world 
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>">tooltip with html</button>
+<br><br>
+<!--trigger with js-->
+        <button class="btn btn-secondary" onlick="showtooltip()">
+            Show Tooltips
+        </button>
+
+        <button class="btn btn-secondary" onlick="hidetooltip()">
+            Hide Tooltips
+        </button>
+
+        <button class="btn btn-secondary" onlick="toggletooltip()">
+            Toggle Tooltips
+        </button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+</body>
+</html>

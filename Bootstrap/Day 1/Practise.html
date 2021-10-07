@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap practice</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <style>
+        /*small-devices(landscape-phones)*/
+        @media (min-width:576px){
+            body{
+                background-color: aquamarine;
+            }
+        }
+
+        /*medium-devices(tablets)*/
+        @media (min-width:768px){
+            body{
+                background-color:lightcoral
+            }
+        }
+
+        /*large-devices(desktop)*/
+        @media(min-width:992px){
+            body{
+                background-color: cadetblue;
+            }
+        }
+
+        /*Extra large devices(large desktops)*/
+        @media(min-width:1200px){
+            body{
+                background-color:lightgreen;
+            }
+        }
+
+        /*max-width*/
+        @media (max-width:575px){
+            body{
+                background-color:pink;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <h1>Heading 1 <small class="text-muted">Sub text</small></h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4 class="h2">Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+
+        <h1 class="display-1">Display 1</h1>
+        <h1 class="display-2">Display 2</h1>
+        <h1 class="display-3">Display 3</h1>
+        <h1 class="display-4">Display 4</h1>
+
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+        <p class="lead">
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+        </p>
+
+        <p class="fw-bold">Bold Text</p>
+        <p class="fw-normal">Normal Text</p>
+        <p class="fst-italic">Italic Text</p>
+
+        <p class="text-lowercase">MAKE LOWERCASE</p>
+        <p class="text-uppercase">make uppercase</p>
+        <p class="text-capitalize">make capitalized</p>
+
+        <blockquote class="blockquote">
+            <p>This is blockquote.</p>
+        </blockquote>
+
+        <blockquote class="text-end">
+            <p>This is blockquote align right.</p>
+        </blockquote>
+
+        <blockquote class="text-end">
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+            <footer class="blockquote-footer">
+                someone famous on <cite class="source title">Source Title.</cite>
+            </footer>
+        </blockquote>
+
+        <ul class="list-unstyled">
+            <li>ex1</li>
+            <li>ex2</li>
+            <li>ex3</li>
+            <li>ex4</li>
+            <li>ex5</li>
+        </ul>
+
+        <ul class="list-inline">
+            <li class="list-inline-item">Block-1</li>
+            <li class="list-inline-item" >Block-2</li>
+            <li class="list-inline-item">Block-3</li>
+        </ul>
+
+        <p class="text-justify">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+
+        <p class="text-start">text align</p>
+        <p class="text-center">text align</p>
+        <p class="text-end">text align</p>
+
+        <p class="text-sm-end">right aligned on small or larger</p>
+        <p class="text-md-end">right aligned on medium or larger</p>
+        <p class="text-lg-end">right aligned on larger or larger</p>
+        <p class="text-xl-end">right aligned on xl or larger</p>
+
+        <p class="text-sm-start">left aligned on small or larger</p>
+        <p class="text-md-start">left aligned on medium or larger</p>
+        <p class="text-lg-start">left aligned on larger or larger</p>
+        <p class="text-xl-start">left aligned on xl or larger</p>
+
+        <p class="text-sm-center">center aligned on small or larger</p>
+        <p class="text-md-center">center aligned on medium or larger</p>
+        <p class="text-lg-center">center aligned on larger or larger</p>
+        <p class="text-xl-center">center aligned on xl or larger</p>
+        <br>
+        <span class="align-baseline">baseline</span>
+        <span class="align-top">top</span>
+        <span class="align-bottom">bottom</span>
+        <span class="align-middle">middle</span>
+        <span class="align-text-top">text-top</span>
+        <span class="align-text-bottom">text-bottom</span>
+        <br>
+
+        <h1 class="d-inline bg-success">Hello</h1>
+        <h1 class="d-inline bg-success">Goodbye</h1>
+
+        <br><br>
+        <span class="d-block bg-success">block</span>
+
+        <br>
+        <div class="d-inline-block bg-success">
+            <h3>Hello</h3>
+            This is inline.
+        </div>
+
+        <div class="d-inline-block bg-success">
+            <h3>Hello</h3>
+            This is inline.
+        </div>
+        <br><br>
+<!--float position-->
+        <div class="float-start">Float left</div><br>
+        <div class="float-end">Float right</div><br>
+        <div class="float-none">Float none</div><br>
+
+        <div class="float-sm-end">Float right on small or wider.</div><br>
+        <div class="float-md-end">Float right on medium or wider.</div><br>
+        <div class="float-lg-end">Float right on large or wider.</div><br>
+        <div class="float-xl-end">Float right on extra large or wider.</div><br>
+        <br>
+        <div class="float-sm-start">Float left on small or wider.</div><br>
+        <div class="float-md-start">Float left on medium or wider.</div><br>
+        <div class="float-lg-start">Float left on large or wider.</div><br>
+        <div class="float-xl-start">Float leftt on extra large or wider.</div><br>
+        <br>
+        <div class="float-sm-none">Float none on small or wider.</div><br>
+        <div class="float-md-none">Float none on medium or wider.</div><br>
+        <div class="float-lg-none">Float none on large or wider.</div><br>
+        <div class="float-xl-none">Float none on extra large or wider.</div><br>
+        <br><br>
+
+        <div class="bg-success clearfix">
+            <button class="float-start">Float Left</button>
+            <button class="float-end">Float Right</button>
+        </div>
+        <br>
+        <h3 class="fixed-top"> Fixed top</h3>
+        <br>
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+        <br><br>
+
+        <h3 class="sticky-top">Sticky</h3>
+        <br>
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+        <br>
+        <h3 class="fixed-bottom"> fixed bottom</h3>
+
+<!--color & Background-->
+
+        <p class="text-primary">Text Primary color</p>
+        <p class="text-secondary">Text Secondary color</p>
+        <p class="text-success">Text Success color</p>
+        <p class="text-info">Text Info color</p>
+        <p class="text-warning">Text warning color</p>
+        <p class="text-danger">Text Danger color</p>
+        <p class="text-light">Text Light color</p>
+        <p class="text-dark"> Text Dark color</p>
+        <p class="text-white">Text White color</p>
+        <br><br>
+
+        <p class="bg-primary ">Background Primary color</p>
+        <p class="bg-secondary">Background Secondary color</p>
+        <p class="bg-success">Background Success color</p>
+        <p class="bg-info">Background Info color</p>
+        <p class="bg-warning">Background warning color</p>
+        <p class="bg-danger">Background Danger color</p>
+        <p class="bg-light">Background Light color</p>
+        <p class="bg-dark text-white">Background Dark color</p>
+        <p class="bg-white">Background White color</p>
+        <br><br>
+        <p class="invisible">Hello</p><br><br>
+
+<!--Spacing-->
+
+        <h1 class="bg-success mb-0">Margin bottom 0</h1>
+        <h1 class="bg-success mb-1">Margin bottom 1</h1>
+        <h1 class="bg-success mb-2">Margin bottom 2</h1>
+        <h1 class="bg-success mb-3"> Margin bottom 3</h1>
+        <h1 class="bg-success mb-4">Margin bottom 4</h1>
+        <h1 class="bg-success mb-5">Margin bottom 5</h1>
+        <br>
+        <h1 class="bg-success mt-0">Margin top 0</h1>
+        <h1 class="bg-success mt-1">Margin top 1</h1>
+        <h1 class="bg-success mt-2">Margin top 2</h1>
+        <h1 class="bg-success mt-3"> Margin top 3</h1>
+        <h1 class="bg-success mt-4">Margin top 4</h1>
+        <h1 class="bg-success mt-5">Margin top 5</h1>
+        <br><br>
+
+        <p><span class="me-5 bg-success">Margin right 5</span>
+            Lorem Ipsum is simply dummy text<span class="ms-3 bg-success">Margin left 3</span> 
+            of the printing and typesetting industry. </p>    
+        <br><br>
+        <p>Lorem Ipsum is simply dummy text <span class="bg-success mx-5">Margin right & Left 5</span>
+             of the printing and typesetting industry. </p>
+
+        <br><br>
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+        </p>
+        <p class="bg-success my-5">Top & Bottom 5</p>
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+        </p>
+        <br><br>
+
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+        </p>
+        <p class="bg-success m-5">Margin all side 5</p>
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+        </p>
+        <br><br>
+
+        <h1 class="bg-warning pb-0">Padding Bottom 0</h1>
+        <h1 class="bg-warning pb-1">Padding Bottom 1</h1>
+        <h1 class="bg-warning pb-2">Padding Bottom 2</h1>
+        <h1 class="bg-warning pb-3">Padding Bottom 3</h1>
+        <h1 class="bg-warning pb-4">Padding Bottom 4</h1>
+        <h1 class="bg-warning pb-5">Padding Bottom 5</h1>
+        <br>
+        <h1 class="bg-warning pt-0">Padding top 0</h1>
+        <h1 class="bg-warning pt-1">Padding top 1</h1>
+        <h1 class="bg-warning pt-2">Padding top 2</h1>
+        <h1 class="bg-warning pt-3">Padding top 3</h1>
+        <h1 class="bg-warning pt-4">Padding top 4</h1>
+        <h1 class="bg-warning pt-5">Padding top 5</h1>
+
+        <br><br>
+
+        <p><span class=" bg-warning pe-5">Padding right 5</span>
+            Lorem Ipsum is simply dummy text<span class="bg-warning ps-3">Padding left 3</span> 
+            of the printing and typesetting industry. </p>  
+            <br><br>
+
+            <p>Lorem Ipsum is simply dummy text <span class="bg-warning px-5">Padding right & Left 5</span>
+                 of the printing and typesetting industry. </p>
+    
+            <br><br>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            </p>
+            <p class="bg-warning py-5">Top & Bottom 5</p>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            </p>
+            <br><br>
+    
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            </p>
+            <p class="bg-warning p-5">Padding all side 5</p>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            </p>
+            <br><br>
+
+            <div class="bg-warning mx-auto" style="width:200px">
+                Center align
+            </div>
+
+<!--Sizing-borders-->
+
+            <div class="bg-success p-3 w-25">Width 25%</div>
+            <div class="bg-success p-3 w-50">Width 50%</div>
+            <div class="bg-success p-3 w-75">Width 75%</div>
+            <div class="bg-success p-3 w-100">Width 100%</div>
+
+            <br><br>
+
+            <div style="height:300px; border:1px solid #333 ;">
+                <div class="bg-primary d-inline-block h-25">Height 25%</div>
+                <div class="bg-primary d-inline-block h-50">Height 50%</div>
+                <div class="bg-primary d-inline-block h-75">Height 75%</div>
+                <div class="bg-primary d-inline-block h-100">Height 100%</div>
+            </div>
+            <br><br>
+
+            <div class="p-3 mb-2 bg-light border">Regular</div>
+            <div class="p-3 mb-2 bg-light border border-primary rounded">Primary</div>
+            <div class="p-3 mb-2 bg-light border border-secondary rounded-top">Secondary</div>
+            <div class="p-3 mb-2 bg-light border border-success border-bottom-0">Success</div>
+            <div class="p-3 mb-2 bg-light border border-info">info</div>
+            <div class="p-3 mb-2 bg-light border border-warning">Warning</div>
+            <div class="p-3 mb-2 bg-light border border-danger">Danger</div>
+            <div class="p-3 mb-2 bg-light border border-light">Light</div>
+            <div class="p-3 mb-2 bg-light border border-dark">Dark</div>
+            <div class="p-3 mb-2 bg-light border border-white">White</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+</body>
+</html>

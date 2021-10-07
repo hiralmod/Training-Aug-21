@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap practice</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+</head>
+<body>
+<!--forms-->
+
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" class="form-control form-control-sm" placeholder="Enter Name">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" class="form-control" placeholder="Enter Email">
+                <small class="form-text text-muted">Your Email will not be share with anyone</small>      
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="form-control form-control-lg" placeholder="Password" readonly>     
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" class="form-control">
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="message">Massage</label>
+                <textarea id="message" row="3" class="form-control"></textarea>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="File">File input</label>
+                <input type="file" id="file" class="form-control-file">
+                <small id="fileHelp" class="form-text text-muted">Max 3mb size</small>
+            </div>
+            <br>
+          
+    <!--form check-->
+
+            <fieldset class="form-group">
+                <legend>What are you using this device?</legend>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" value="option 1" checked>Personal
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" value="option 1" checked>Commercial Use
+                    </lable>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" value="option 1" checked>Testing
+                    </lable>
+                </div>
+            </fieldset>
+            <br>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    Sign up for Newsletter
+                </lable>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+<br><br>
+    <!--inline form-->
+        <form class="form-inline">
+            <input type="text" class="form-control-me-2" id="username" placeholder="Enter username">
+            <input type="password" class="form-control-me-2" id="password" placeholder="Password">
+            <br>
+            <div class="form-check">
+                <label class="form-check-label me-2">
+                    <input type="checkbox" class="form-check-input"> Remember me
+                </label>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-secondary">Submit</button>
+        </form>
+        <br>
+
+        <!--validation-->
+        <div class="form-group">
+            <label for="username">UserName</label>
+            <input type="text" id="username" class="form-control is-valid">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="text" id="password" class="form-control is-invalid">
+            <div class="invalid-feedback">
+                Password is not strong enough.
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="password2">Confirm Password</label>
+            <input type="text" id="password2" class="form-control is-invalid"">
+            <div class="invalid-feedback">
+                Password does not match.
+            </div>
+        </div>
+        <br>
+
+<!--Input groups-->
+
+        <div class="input-group">
+            <span class="input-group-addon">@</span>
+            <input type="text" class="form-control" placeholder="Username">
+        </div>
+        <br>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Email">
+            <span class="input-group-addon">@something.com</span>
+        </div>
+        <br>
+        <label for="profile-url">Choose Profile URL</label>
+
+        <div class="input-group">
+            <span class="input-group-addon">https://something.com/member/</span>
+            <input type="text" class="form-control" id="profie-url">
+        </div>
+        <br>
+        
+        <div class="input-group">
+            <span class="input-group-addon">$</span>
+            <input type="text" class="form-control">
+            <span class="input-group-addon">.00</span>
+        </div>
+        <br>
+        
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon">@</span>
+            <input type="text" class="form-control" placeholder="Username">
+        </div>
+        <br>
+        <div class="input-group ">
+            <span class="input-group-addon">
+                <input type="checkbox">
+            </span>
+            <input type="text" class="form-control">
+        </div>
+
+    <br>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <input type="radio" class="form-control">
+            </span>
+            <span class="input-group-addon">$5.00</span>
+            <input type="text"class="form-control">
+        </div>
+        <br>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for...">
+            <span class="input-group-btn">
+                <button class="btn btn-primary" type="button">Search</button>
+            </span>
+        </div>
+</body>
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+</body>
+</html>
