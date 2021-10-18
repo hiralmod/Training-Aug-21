@@ -1,0 +1,62 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+.col{
+    background: url("../../Assests/IMG/16.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height:100%;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.col .menu-bar{
+    background:darkgreen;
+    text-align: center;
+}
+.col .menu-bar ul{
+    display:inline-flex;
+    list-style:none;
+    color:whitesmoke;
+}
+.col .menu-bar ul li{
+    width:120px;
+    margin:10px;
+    padding:10px;
+}
+.col .menu-bar ul li a{
+    text-decoration: none;
+    color:whitesmoke;
+    display:block;
+}
+.col .active, .menu-bar ul li:hover{
+    background:rgb(129, 177, 33);
+    border-radius: 3px;
+}
+.col .sub-menu1{
+    display:none;
+}
+.col .menu-bar ul li:hover .sub-menu1{
+    display:block !important;
+    position: absolute;
+    background-color:darkgreen ;
+    margin-top: 15px;
+    margin-left: -15px;
+}
+.col .menu-bar ul li:hover .sub-menu1 ul{
+    display:block ;
+    margin:10px;
+}
+.col .menu-bar ul li:hover .sub-menu1 ul li{
+    width:150px;
+    padding:10px;
+    border-bottom: 1px dotted whitesmoke;
+    background:transparent;
+    border-radius:0;
+    text-align:left;
+}
+.col .menu-bar ul li:hover .sub-menu1 ul li:last-child{
+    border-bottom:none;
+}
+.col .menu-bar ul li:hover .sub-menu1 ul li a:hover{
+    color:rgb(154, 205, 50);
+}

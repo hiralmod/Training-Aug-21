@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid alignment</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <style>
+        .grid-container{
+            background-color:lightyellow;
+        }
+        .navbar-nav li a:hover{
+            color:hotpink !important;
+            background-color:rgb(63, 67, 71);
+        }
+        .item3{
+            background-color:slategrey;
+            color: black;
+        }
+        .nav-link{
+            color:silver !important;
+        }
+        h3{
+            text-align: center;
+        }
+        @media(max-width:768px){
+            .col-md-4{
+                width: 40%;
+            }
+            .col{
+                width: 60%;
+            }
+            .item3{
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="grid-container border border-2">
+        <div class="item1 border border-dark border-2 h-60" style="width:auto; height:60px">
+            <nav class="navbar navbar-expand-md me-auto navbar-dark bg-dark">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#togglemenu"
+                aria-controls="togglemenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="togglemenu">
+                <ul class="navbar-nav">
+                    <li class="nav-item me-5"><a href="../../Home.html" class="nav-link">Home</a></li>
+                    <li class="nav-item me-5"><a href="../../HTML/HTML.html" class="nav-link active">HTML</a></li>
+                    <li class="nav-item me-5"><a href="../../CSS/CSS.html" class="nav-link">CSS</a></li>
+                    <li class="nav-item me-5"><a href="../bootstrap.html" class="nav-link">Bootstrap</a></li>
+                    <li class="nav-item me-5"><a href="../../JavaScript/Javascript.html" class="nav-link">JavaScript</a></li>
+                    <li class="nav-item me-5"><a href="../../jQuery/jQuery.html" class="nav-link">jQuery</a></li>
+                </ul>
+                </div>
+                </nav>
+            </div>
+    
+        <div class="item2">
+            <div class="row">
+                <div class="col-md-4 border border-dark border-2 h-500">
+                    <div class="container">
+                        <nav class="navbar navbar-expand-md nav  nav-fill nav-pills nav-justified">
+                            <button class="navbar-toggler navbar navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#togglemenu1"
+                            aria-controls="togglemenu1">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="togglemenu1">
+                                <div class="container">
+                                    <button class="btn btn-secondary d-block mb-2 w-100" data-bs-toggle="collapse" data-bs-target="#collapse-btn-1">Day 1</button>
+                                    <div class="collapse mb-5" id="collapse-btn-1">
+                                        <div class="card">
+                                            <div class="card-body w-100">
+                                    <a href="../Day 1/Assignment.html" class="dropdown-item">Assignment</a>
+                                    <a href="../Day 1/Practise.html" class="dropdown-item">Practice-1</a>
+                                    <a href="../Day 1/practice2.html" class="dropdown-item">Practice-2</a>
+                                    <a href="../Day 1/Practice3.html" class="dropdown-item">Practice-3</a>
+                                    <a href="../Day 1/Tables.html" class="dropdown-item">Practice-4</a>
+                                    <a href="../Day 1/alerts&progressbar.html" class="dropdown-item">Practice-5</a>
+                                    <a href="../Day 1/cards.html" class="dropdown-item">Practice-6</a>
+                                </div>
+                        </div>
+                        </div>
+
+                       <button class="btn btn-secondary d-block mb-2 w-100" data-bs-toggle="collapse" data-bs-target="#collapse-btn-2">Day 2</button>
+                                <div class="collapse mb-5" id="collapse-btn-2">
+                                    <div class="card">
+                                        <div class="card-body w-100">
+                                    <a href="../Day 1/Assignment.html" class="dropdown-item">Assignment</a>
+                                    <a href="../Day 2/grid-alignment.html" class="dropdown-item">Practice-1</a>
+                                    <a href="../Day 2/Grid-system.html" class="dropdown-item">Practice-2</a>
+                                    <a href="../Day 2/flex-box.html" class="dropdown-item">Practice-3</a>
+                                    <a href="../Day 2/collapse.html" class="dropdown-item">Practice-4</a>
+                                    <a href="../Day 2/auto-margins.html" class="dropdown-item">Practice-5</a>
+                                    <a href="../Day 2/modal.html" class="dropdown-item">Practice-6</a>
+                                    <a href="../Day 2/carousel.html" class="dropdown-item">Practice-7</a>
+                                    <a href="../Day 2/popovers.html" class="dropdown-item">Practice-8</a>
+                                    <a href="../Day 2/tooltips.html" class="dropdown-item">Practice-9</a>
+                                </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </nav>
+                            </div>
+                    </div>
+                
+    <div class="col border-dark border-2 h-500 mt-3 mb-3">
+    <div class="container">
+<!--vertical-->
+        <div class="container">
+            <div class="row align-items-start" style="height:200px; border:1px solid #333">
+                <div class="col">Top align text</div>
+                <div class="col">Top align text</div>
+                <div class="col">Top align text</div>
+            </div>
+
+            <div class="row align-items-center" style="height:200px; border:1px solid #333">
+                <div class="col">Middle align text</div>
+                <div class="col">Middle align text</div>
+                <div class="col">Middle align text</div>
+            </div>
+
+            <div class="row align-items-end" style="height:200px; border:1px solid #333">
+                <div class="col">Bottom align text</div>
+                <div class="col">Bottom align text</div>
+                <div class="col">Bottom align text</div>
+            </div>
+        </div>
+    <br><br>
+<!--vertical aligns individual cols-->
+        <div class="container">
+            <div class="row" style="height:200px; border:1px solid #333">
+                <div class="col align-self-start">Top align text</div>
+                <div class="col align-self-center">Middle align text</div>
+                <div class="col align-self-end">Bottom align text</div>
+            </div>
+        </div>
+<br><br>
+<!--horizntal aligned cols-->
+        <div class="container">
+            <div class="row justify-content-start" style="height:200px; border:1px solid #333">
+                <div class="col-4">Left-aligned text</div>
+                <div class="col-4">Left-aligned text</div>
+            </div>
+            <div class="row justify-content-center" style="height:200px; border:1px solid #333">
+                <div class="col-4">Center-aligned text</div>
+                <div class="col-4">Center-aligned text</div>
+            </div>
+            <div class="row justify-content-end" style="height:200px; border:1px solid #333">
+                <div class="col-4">Right-aligned text</div>
+                <div class="col-4">Right-aligned text</div>
+            </div>
+            <div class="row justify-content-around" style="height:200px; border:1px solid #333">
+                <div class="col-4">Content around</div>
+                <div class="col-4">Content-around</div>
+            </div>
+            <div class="row justify-content-between" style="height:200px; border:1px solid #333">
+                <div class="col-4">Content between</div>
+                <div class="col-4">Content between</div>
+            </div>
+        </div>
+<br><br>
+<!--column wrapping and no gutters-->
+        <div class="row">
+            <div class="col-9">
+                <div class="card">
+                    <div class="card-body">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-body">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="item3 border border-dark border-2 h-40 text-center" style="width:auto">
+        <strong>&copy;copyright2021</strong>
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+</body>
+</html>

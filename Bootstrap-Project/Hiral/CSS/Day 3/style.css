@@ -1,0 +1,74 @@
+.col{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:fantasy;
+}
+
+.col .container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 40px 20px 0 20px;
+}
+.col .container .heading{
+    width:50%;
+    padding-bottom: 50px;;
+}
+.col .container .heading h1{
+    font-size: 30px;
+    padding-bottom: 10px;
+    border-bottom:3px solid black;
+    font-weight: bolder;
+}
+.col .container .box{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.col .container .box .Ex1{
+    display:flex;
+    flex-direction: column;
+    width:32.5%;
+}
+.col .container .box .Ex1 img{
+     width:100%;
+     padding-bottom: 15px;
+     border-radius:5px;
+
+}
+.col .container .btn{
+    margin:40px 0 50px 0;
+    background-color:orchid;
+    padding:15px 40px;
+    border-radius: 5px;
+}
+.col .container .btn a{
+    color:maroon;
+    text-decoration: none;
+    font-size:20px;
+    font-weight: bolder;
+}
+.col .container .btn a:hover{
+    color:brown;
+}
+
+@media only screen and (max-width:700px){
+    .col .container .box{
+        flex-direction:column;
+    } 
+    .col .container .box .Ex1{
+        width:100%;
+    }   
+}
+
+@media only screen and (max-width:381px){
+    .col .container .heading{
+        width:100%;
+    }
+    .col .container .heading h1{
+        font-size: 25px;
+    }    
+}

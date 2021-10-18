@@ -1,0 +1,13 @@
+.col h1{
+    color:blue;
+}
+.col p{
+    font-style: bold;
+}
+.col div{
+    background-color:lightgrey;
+    width:300px;
+    border:10px solid brown;
+    padding:50px;
+    margin:30px;
+}

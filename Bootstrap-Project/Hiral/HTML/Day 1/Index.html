@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Learning</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <style>
+        .grid-container{
+            background-color:lightyellow;
+        }
+        .navbar-nav li a:hover{
+            color:hotpink !important;
+            background-color:rgb(63, 67, 71);
+        }
+        .item3{
+            background-color:slategrey;
+            color: black;
+        }
+        @media(max-width:768px){
+            .col-md-4{
+                width: 40%;
+            }
+            .col{
+                width: 60%;
+            }
+            .item3{
+                width: 100%;
+            }
+        }
+    </style>
+    <style>
+        tr{
+            border:2px solid black;
+        }
+        td{
+            border:2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container border border-2">
+        <div class="item1 border border-dark border-2 h-60" style="width:auto; height:60px">
+            <nav class="navbar navbar-expand-md me-auto navbar-dark bg-dark">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#togglemenu"
+                aria-controls="togglemenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="togglemenu">
+                <ul class="navbar-nav">
+                    <li class="nav-item me-5"><a href="../../Home.html" class="nav-link">Home</a></li>
+                    <li class="nav-item me-5"><a href="../HTML.html" class="nav-link active">HTML</a></li>
+                    <li class="nav-item me-5"><a href="../../CSS/CSS.html" class="nav-link">CSS</a></li>
+                    <li class="nav-item me-5"><a href="../../Bootstrap/bootstrap.html" class="nav-link">Bootstrap</a></li>
+                    <li class="nav-item me-5"><a href="../../JavaScript/Javascript.html" class="nav-link">JavaScript</a></li>
+                    <li class="nav-item me-5"><a href="../../jQuery/jQuery.html" class="nav-link">jQuery</a></li>
+                </ul>
+                </div>
+            </nav>
+        </div>
+    
+
+        <div class="item2">
+            <div class="row">
+                <div class="col-md-4 border border-dark border-2 h-500">
+                    <div class="container">
+                        <nav class="navbar navbar-expand-md nav  nav-fill nav-pills nav-justified">
+                            <button class="navbar-toggler navbar navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#togglemenu1"
+                            aria-controls="togglemenu1">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="togglemenu1">
+                                <div class="container">
+                                    <button class="btn btn-secondary d-block mb-2 w-100" data-bs-toggle="collapse" data-bs-target="#collapse-btn-1">Day 1</button>
+                                    <div class="collapse mb-5" id="collapse-btn-1">
+                                        <div class="card">
+                                    <div class="card-body w-100">
+                                    <a href="../Day 1/assignment.html" class="dropdown-item">Assignment</a>
+                                    <a href="../Day 1/Index.html" class="dropdown-item">Practice-1</a>
+                                    <a href="../Day 1/Practice.html" class="dropdown-item">Practice-2</a>
+                                    <a href="../Day 1/Practice1.html" class="dropdown-item">Practice-3</a>
+                                </div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        </nav>
+                        </div>
+                        </div>
+                
+        <div class="col border-dark border-2 h-500 mt-5 mb-5 ms-3">
+                <h1>Learning HTML5.</h1>
+                <h2>First day of HTML.</h2>
+                <p>I am learning HTML5. This is our first day.</p>
+                <br>
+                <a href="www.w3schools.com">HTML</a>
+                <br>
+                <ul type="Bullet">
+                    <li>Tea
+                    <ul>
+                        <li>Black Tea</li>
+                        <li>Green Tea</li>
+                    </ul>
+                    </li>
+                    <li>Coffee</li>
+                    <li>Milk</li>
+                </ul>
+                <ol type="1">
+                    <li>Pizza
+                    <ol>
+                        <li>Margerita pizza</li>
+                        <li>Cheese pizza</li>
+                    </ol>
+                    </li>
+                    <li>burger</li>
+                </ol>
+
+                <table border="3" bgcolor="pink">
+                    <caption>Monthly Savings Details</caption>
+                    <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>Savings</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>January</td>
+                        <td>1500</td>
+                    </tr>
+                    <tr>
+                        <td>February</td>
+                        <td>1000</td>
+                    </tr>
+                    <tr>
+                        <td>March</td>
+                        <td>2200</td>
+                    </tr>
+                    <tr>
+                        <td>April</td>
+                        <td>900</td>
+                    </tr>
+                    <tr>
+                        <td>May</td>
+                        <td>2000</td>
+                    </tr>
+                </tbody>
+                <tfooter>
+                    <td>Sum</td>
+                    <td>7600</td>
+                </tfooter>
+                </table>
+
+                <article>
+                    <h1>Latest News of Rain in Gujarat</h1>
+                    <p>
+                        Rajkot and Jamnagar districts in Gujarat are witnessing heavy rainfall since midnight.
+                        Massive flooding caused havoc in Rajkot's Dhoraji,Paddhari and Gondal Taluka ,According to media Reports.
+                        Jamnagar's Kalavad and Dhrol taluka also recieved significant rainfall.
+                    </p>
+                
+                </article>
+            </div>
+        </div>
+    </div>
+    <div class="item3 border border-dark border-2 h-40 text-center" style="width:auto; height:40px">
+        <strong>&copy;copyright2021</strong>
+    </div>
+    </div>
+
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+</body>
+</html>
