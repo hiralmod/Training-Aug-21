@@ -1,0 +1,45 @@
+body{
+    margin-top:105px;
+}
+
+.navbar{
+    box-shadow: 2px 2px 5px #49abbe;
+    opacity: 0.9;
+    background: #fff;
+}
+.navbar  .nav-item{
+    font-size: 1.4rem;
+    padding-right: 20px;
+}
+
+#showcase{
+    position: relative;
+    background: url('../../../sass project images/img/mountains.jpg');
+    min-height: 600px;
+}
+#showcase .primary-overlay{
+    background: #5bacbd ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.info-header{
+    width: 50%;
+    margin: auto;
+    border-bottom: 1px solid #ddd;
+}
+#authors img{
+        margin-top: -50px
+}
+#authors .bi{
+    font-size: 25px;
+}
+#authors .card:hover{
+    background:#49abbe;
+    color: white;
+}
+#authors .card:hover .bi{
+    color: white;
+}
