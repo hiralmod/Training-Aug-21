@@ -154,24 +154,24 @@
         <form name="empfom" >
 
                 <label for="Id">EmployeeID:</label>
-                <input type="text" id="id" name="EmployeeID" placeholder="Enter your EmpID" >
+                <input type="text" id="id" name="EmployeeID" placeholder="Enter your EmpID" required>
                 <div id="eid"> EmployeeID should be 5 character long.</div><br> <br>
 
                 <label for="Name">Name:</label>
-                <input type="text" name="name" id="name" placeholder="Enter your name" ><br> <br>
+                <input type="text" name="name" id="name" placeholder="Enter your name" required ><br> <br>
 
                 <label for="age">Age:</label>
-                <input type="number"  id="age" name="age" placeholder="Enter your age" min="18" ><br><br>
+                <input type="number"  id="age" name="age" placeholder="Enter your age" min="18" required ><br><br>
 
                 <label for="gender" >Gender:</label>
                 <input type="radio" id="gender" name="Gender" ><span>Male</span><br>
                 <input type="radio" id="gender" name="Gender" ><span>Female</span> <br>
 
                 <label for="Designation">Designation:</label>
-                <input type="text" id="designation" name="Designation" placeholder="Enter your designation" ><br><br>
+                <input type="text" id="designation" name="Designation" placeholder="Enter your designation" required><br><br>
 
                 <label for="salary">Salary:</label>
-                <input type="number" id="salary" name="salary" placeholder="Salary" ><br><br>
+                <input type="number" id="salary" name="salary" placeholder="Salary" required ><br><br>
 
                 <label for="Location">Location:</label>
                 <select name="Location" name="country" id="country">
@@ -185,13 +185,13 @@
                 </select><br><br>
 
                 <label for="email">Email ID:</label>
-                <input type="email" id="mail" name="email" placeholder="Enter your EmailID" ><br><br>
+                <input type="email" id="mail" name="email" placeholder="Enter your EmailID" required><br><br>
             
                 <label for="DOJ">Date Of Joining:</label>
-                <input type="date" id="doj" name="DOJ" placeholder="Date Of Joining" ><br><br>
+                <input type="date" id="doj" name="DOJ" placeholder="Date Of Joining" required><br><br>
 
                 <label for="Contact">Contact Number:</label>
-                <input type="number" id="cno" name="contact" placeholder="Your Contact Number" ><br><br>
+                <input type="number" id="cno" name="contact" placeholder="Your Contact Number" required><br><br>
 
 
                 <button class="btn btn-success" type="button" onclick="validForm()">Submit</button>
