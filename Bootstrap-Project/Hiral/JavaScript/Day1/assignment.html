@@ -42,39 +42,54 @@
     </style>
 
 
-    <script>
-        function calculation()
-        {
-            var num1=parseInt(document.getElementById('num1').value);
-            var num2=parseInt(document.getElementById('num2').value);
+<script>
 
-            if(document.getElementById('op1').checked)
-            {
-                alert(num1+num2);
-            }
-
-            if(document.getElementById('op2').checked)
-            {
-                alert(num1-num2);
-            }
-
-            if(document.getElementById('op3').checked)
-            {
-                alert(num1*num2);
-            }
-
-            if(document.getElementById('op4').checked)
-            {
-                alert(num1/num2);
-            }
-        }
-
-        function reset()
-        {
-            document.getElementById("myform").reset();
-        }
+    function calculate() {
     
-    </script>
+    
+    var number1 = parseInt(document.getElementById('num1').value);
+    var number2 = parseInt(document.getElementById('num2').value);
+    
+    
+    if (document.getElementById('addition').checked == true) {
+        var operation = document.getElementById("addition").value;
+    }
+    else if (document.getElementById('subtraction').checked == true) {
+        var operation = document.getElementById("subtraction").value;
+    }
+    else if (document.getElementById('multiplication').checked == true) {
+        var operation = document.getElementById("multiplication").value;
+    }
+    else if (document.getElementById('division').checked == true) {
+        var operation = document.getElementById("division").value;
+    } else {
+        alert("Please Select Operation ");
+    }
+    
+    
+    if (operation == "1") {
+        document.getElementById("result").value = number1 + number2;
+    }
+    else if (operation == "2") {
+        document.getElementById("result").value = number1 - number2;
+    }
+    else if (operation == "3") {
+        document.getElementById("result").value = number1 * number2;
+    }
+    else if (operation == "4") {
+        document.getElementById("result").value = number1 / number2;
+    }
+    
+    }
+    
+    
+    
+    function reset() {
+    document.getElementById("num1").value = "";
+    document.getElementById("num2").value = "";
+    document.getElementsByName("operation").value = "";
+    }
+        </script>
 </head>
 <body>
 
@@ -181,21 +196,32 @@
                     </div>
                     
             <div class="col border-dark border-2 h-500 mt-5">
-     <div class="container mt-5 mb-5">
-         <form id="myform" name="Math operations">
-             <p>First number:</p>
-             <input type="text" id='num1'><br>
-             <p>Second number:</p>
-             <input type="text" id='num2'><br>
-
-             <input type="radio" id='op1' value="+" name='operator'> Addition<br>
-             <input type="radio" id='op2' value="-" name='operator'> Subtraction<br>
-             <input type="radio" id='op3' value="*" name='operator'> Multiplication<br>
-             <input type="radio" id='op4' value="/" name='operator'> Division<br>
-         </form>
-         <input type="button" class="btn btn-success mt-2" value='calculate' onclick='calculation()'>
-         <input type="button" class="btn btn-primary mt-2" value='reset' onclick='reset()'>
-
+                <div class="container w-25 mb-3">
+                    <form>
+                        <div class="form-group">
+                            <lable for="num1">Enter First Number</lable>
+                            <input type="text" id="num1" class="form-control" placeholder="enter first number">
+                        </div>
+                        <div class="form-group">
+                            <label for="num2">Enter Second Number</label>
+                            <input type="text" id="num2" class="form-control" placeholder="enter second number">
+                        </div>
+                        <div class="form-check">
+                            <label for="operation">Please Select Operation:</label><br />
+                            <label for="addition" class="form-check-lable">Addition</label>
+                            <input type="radio" id="addition" class="form-check-input" value="1" name="operation"> <br />
+                            <label for="Subtraction" class="form-check-lable">Subtraction</label>
+                            <input type="radio" id="subtraction" class="form-check-input" value="2" name="operation"><br />
+                            <label for="Multiplication" class="form-check-lable">Multiplication</label>
+                            <input type="radio" id="multiplication" class="form-check-input" value="3" name="operation"><br />
+                            <label for="Division" class="form-check-lable">Division</label>
+                            <input type="radio" id="division" class="form-check-input" value="4" name="operation">
+                        </div>
+                        <button type="button" class="btn btn-success" onclick="calculate()">Calculate</button>
+                        <input type="text" id="result"><br />
+                        <button type="button" class="btn btn-danger mt-2" onclick="reset()">Reset</button>
+                    </form>
+                </div>
      </div>
      </div>
      </div>

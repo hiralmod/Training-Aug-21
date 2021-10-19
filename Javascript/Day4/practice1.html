@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise</title>
+</head>
+<body>
+<!--Define a function called callback which receives an argument and prints the square of that number.-->
+    <script>
+        function sq(a,callback)
+        {
+            callback(a*a);
+        }
+        
+        sq(2,(b)=>{
+            console.log(b);
+        })
+    </script>
+
+<!--var and let.-->
+        <script>
+
+/*var*/
+            for (var i = 0; i < 5; i++) 
+            {
+	            console.log("Inside the loop:", i);
+            }
+
+                console.log("Outside the loop:", i);
+   
+/*let*/
+        
+            for (let a = 0; a < 5; a++) 
+            {
+                console.log("Inside the loop:", a);
+            }
+
+                console.log("Outside the loop:", a);
+        </script>
+
+<!--task 3-->
+
+    <script>
+           function stringReverse(input)
+        {
+          return new Promise((resolve, reject) => 
+            {
+                var txt = input;
+                if(typeof(txt) == 'string')
+                {
+                    console.log(txt);
+                    txt = txt.split('').reverse().join('');
+                    resolve(txt);
+
+                }
+
+                else
+                {
+                    var msg = "checking Invalid input";
+                    reject(msg);
+                }
+            });   
+            
+        } 
+        function display(data){
+            console.log(data);
+        }
+        async function doWork(data){
+       try{
+            let revString = await stringReverse(data);
+            let dis =  await display(revString);
+       }
+       catch(err){
+           console.log(err);
+       }
+    }
+    let b = 1234;
+    let n = parseInt(b);
+    doWork(n);
+
+    
+    </script>
+</body>
+</html>

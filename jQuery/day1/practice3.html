@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    
+    <form id="myform">
+        <label for="technology">Please Select your technology:</label><br><br>
+
+        <input type="radio"  name="tech" value="PHP">PHP
+        <input type="radio"  name="tech" value="ASP.NET">ASP.NET
+        <input type="radio"  name="tech" value="ASP">ASP
+        <input type="radio"  name="tech" value="JSP">JSP
+        <input type="radio"  name="tech" value="PERL">PERL
+        <input type="radio"  name="tech" value="COLD Fusion">COLD Fusion
+        <input type="radio"  name="tech" value="Other">OTHER<br><br>
+
+        <p>You have selected:
+            <span class="output"></span>
+        </p>
+
+        <button id="result" type="button">Submit</button>
+    </form>
+
+    <script>
+            $('#result').on('click',function(){
+                output=$('input[name=tech]:checked','#myform').val();
+
+                document.querySelector('.output').textContent = output;
+            });
+   
+        </script>
+</body>
+</html>

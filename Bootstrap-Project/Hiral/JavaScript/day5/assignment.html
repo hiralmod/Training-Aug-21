@@ -40,8 +40,9 @@
         }
     </style>
 
+    <script src="./script.js"></script>
 </head>
-<body onload="Table(myArray)">
+<body onload=Table(myArray)>
 
     <div class="grid-container border border-2">
         <div class="item1 border border-dark border-2 h-60" style="width:auto; height:60px">
@@ -145,95 +146,25 @@
                             </div>
                     </div>
             <div class="col border-dark border-2 h-500 mt-5 mb-5">
-    <div class="container m-5"> 
-        <table class="table table-bordered text-center">
-            <tr>
-                <th>ProductID</th>
-                <th>ProductName</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Add to Cart</th>
 
-            </tr>
-            <tbody id="demo">
-
-            </tbody>
-        </table>
-        <button class="btn btn-success" onclick="CartSummary()">Cart Summary</button>
-        <hr>
-        
-
-        </div>
-    </div>
-
-    <script>
-       var myArray = 
-[
-    {
-        "ProductId" : 1,
-        "ProductName" : "Cheese",
-        "Price" : 100,
-        "Quantity" : 1
-    },
-    {
-        "ProductId" : 2,
-        "ProductName" : "Pen",
-        "Price" : 150,
-        "Quantity" : 2
-    },
-    {
-        "ProductId" : 3,
-        "ProductName" : "Butter",
-        "Price" : 100,
-        "Quantity" : 1
-    },
-    {
-        "ProductId" : 4,
-        "ProductName" : "Pencil",
-        "Price" : 10,
-        "Quantity" : 1
-    }
-]
-
-function Table(data)
-{
-    var table =  document.getElementById('demo');
-    for (var i=0;i<data.length;i++)
-    {
-        var row = `<tr>
-                        <td>${data[i].ProductId}</td>
-                        <td>${data[i].ProductName}</td>
-                        <td>${data[i].Price}</td>
-                        <td>${data[i].Quantity}</td>
-                        <td><input value = ${data[i].ProductId} onchange ="addToCart(${data[i].ProductId})"></td>
-                  </tr>`
-        table.innerHTML +=row;    
-    }
-}
-
-function addToCart(rowid)
-{
-
-    var localdata =myArray.filter(r => r.ProductId == rowid);
-    var getaddcart = localStorage.getItem("productdata");
-    if(getaddcart == null)
-    {
-        localStorage.setItem("productdata","" + JSON.stringify(localdata) );
-    }
-    else
-    {
-
-        localStorage.setItem("productdata",getaddcart + JSON.stringify(localdata) );
-    }
-
-
-}
-function CartSummary()
-{
-    console.log(localStorage.getItem('productdata'));
-}
-
-    </script>
+                    <div class="container mt-3 p-2 w-75">
+                        <table class="table table-bordered">
+                            <thead class="bg-success">
+                                <tr>
+                                    <th>Product Id</th>
+                                    <th>Product Name</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Buttons</th>
+                                </tr>
+                            </thead>
+                            <tbody id="Table">
+                                
+                            </tbody>
+                        </table>
+                        <button class="btn btn-danger w-100" onclick="cartSummary()">Cart Summary</button>
+                        
+                    </div>
     </div>
     </div>
 </div>

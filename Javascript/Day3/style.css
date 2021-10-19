@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+}
+label{
+    display: grid;
+    clear: left;
+    width: 100px;
+    margin-right: 10px;
+    font-family: fantasy;
+    font-size: 20px;
+}
+select,input,span{
+    font-family:Cambria;
+    font-size: 17px;
+}
